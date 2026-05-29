@@ -1,0 +1,28 @@
+[site]
+title = "刘环鸣"
+description = "刘环鸣的个人主页。"
+favicon = "/favicon.png"
+last_updated = "2026年5月29日"
+
+[author]
+name = "刘环鸣"
+title = "本科生"
+institution = "中国科学技术大学"
+
+[social]
+location = "中国科学技术大学高新校区"
+location_details = [
+  "中国科学技术大学高新校区"
+]
+
+[[navigation]]
+title = "关于我"
+type = "page"
+target = "about"
+href = "/"
+
+[[navigation]]
+title = "论文"
+type = "page"
+target = "publications"
+href = "/publications"

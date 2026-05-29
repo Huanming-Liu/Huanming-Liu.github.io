@@ -1,0 +1,33 @@
+type = "about"
+title = "关于我"
+
+[profile]
+research_interests = [
+  "具身智能",
+  "机器人操作"
+]
+
+[[sections]]
+id = "about"
+type = "markdown"
+source = "bio.md"
+title = "关于我"
+
+[[sections]]
+id = "education"
+type = "markdown"
+source = "education.md"
+title = "教育经历"
+
+[[sections]]
+id = "selected-publications"
+type = "publications"
+title = "精选论文"
+filter = "selected"
+limit = 3
+
+[[sections]]
+id = "news"
+type = "list"
+title = "动态"
+source = "news.toml"
