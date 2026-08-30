@@ -114,7 +114,18 @@ export default function ExperiencePage({ config }: { config: ExperiencePageConfi
                                                     </div>
 
                                                     <div className="mb-2 flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
-                                                        <h3 className="text-xl font-semibold text-primary">{item.title}</h3>
+                                                        {item.organizationUrl ? (
+                                                            <a
+                                                                href={item.organizationUrl}
+                                                                target="_blank"
+                                                                rel="noopener noreferrer"
+                                                                className="text-xl font-semibold text-primary transition-opacity hover:opacity-70"
+                                                            >
+                                                                {item.organization}
+                                                            </a>
+                                                        ) : (
+                                                            <h3 className="text-xl font-semibold text-primary">{item.organization}</h3>
+                                                        )}
                                                         {item.date && (
                                                             <span className="hidden shrink-0 rounded-full bg-neutral-100 px-3 py-1 text-sm font-medium text-neutral-600 dark:bg-neutral-800 dark:text-neutral-300 sm:inline-flex">
                                                                 {item.date}
@@ -122,18 +133,7 @@ export default function ExperiencePage({ config }: { config: ExperiencePageConfi
                                                         )}
                                                     </div>
 
-                                                    {item.organizationUrl ? (
-                                                        <a
-                                                            href={item.organizationUrl}
-                                                            target="_blank"
-                                                            rel="noopener noreferrer"
-                                                            className="font-medium text-accent transition-opacity hover:opacity-70"
-                                                        >
-                                                            {item.organization}
-                                                        </a>
-                                                    ) : (
-                                                        <p className="font-medium text-accent">{item.organization}</p>
-                                                    )}
+                                                    <p className="font-medium text-accent">{item.title}</p>
 
                                                     {item.location && (
                                                         <p className="mt-2 flex items-center gap-1.5 text-sm text-neutral-500">

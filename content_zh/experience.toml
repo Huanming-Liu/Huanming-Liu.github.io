@@ -21,6 +21,16 @@ kind = "education"
 title = "实习经历"
 
 [[sections.items]]
+title = "具身智能算法工程师"
+organization = "灵犀智涌（LYNSENSE）"
+date = "2026.07 — 至今"
+location = "中国上海"
+image = "/experience/lynsense.jpg"
+imageAlt = "灵犀智涌标识"
+imageMode = "wordmark"
+kind = "work"
+
+[[sections.items]]
 title = "科研实习生"
 organization = "上海交通大学 ScaleLab"
 organizationUrl = "https://scalelab-sjtu.github.io/index.html"
@@ -32,13 +42,4 @@ advisorUrl = "https://yaomarkmu.github.io"
 image = "/experience/sjtu-emblem.png"
 imageAlt = "上海交通大学校徽"
 imageMode = "contain"
-kind = "work"
-
-[[sections.items]]
-title = "具身智能算法工程师"
-organization = "灵犀智涌（LYNSENSE）"
-date = "2026.07 — 至今"
-image = "/experience/lynsense.jpg"
-imageAlt = "灵犀智涌标识"
-imageMode = "wordmark"
 kind = "work"

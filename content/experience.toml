@@ -21,6 +21,16 @@ kind = "education"
 title = "Internships"
 
 [[sections.items]]
+title = "Embodied AI Algorithm Engineer"
+organization = "LYNSENSE (灵犀智涌)"
+date = "Jul 2026 — Present"
+location = "Shanghai, China"
+image = "/experience/lynsense.jpg"
+imageAlt = "LYNSENSE logo"
+imageMode = "wordmark"
+kind = "work"
+
+[[sections.items]]
 title = "Research Intern"
 organization = "ScaleLab, Shanghai Jiao Tong University"
 organizationUrl = "https://scalelab-sjtu.github.io/index.html"
@@ -32,13 +42,4 @@ advisorUrl = "https://yaomarkmu.github.io"
 image = "/experience/sjtu-emblem.png"
 imageAlt = "Shanghai Jiao Tong University emblem"
 imageMode = "contain"
-kind = "work"
-
-[[sections.items]]
-title = "Embodied AI Algorithm Engineer"
-organization = "LYNSENSE (灵犀智涌)"
-date = "Jul 2026 — Present"
-image = "/experience/lynsense.jpg"
-imageAlt = "LYNSENSE logo"
-imageMode = "wordmark"
 kind = "work"
