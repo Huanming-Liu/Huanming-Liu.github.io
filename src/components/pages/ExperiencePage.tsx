@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { BriefcaseBusiness, CalendarDays, GraduationCap } from 'lucide-react';
+import { BriefcaseBusiness, GraduationCap } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { ExperienceItem, ExperiencePageConfig } from '@/types/page';
 
@@ -22,8 +22,8 @@ function ExperienceImage({ item }: { item: ExperienceItem }) {
 
     if (item.imageMode === 'crop-left') {
         return (
-            <div className="flex h-20 w-20 shrink-0 items-center justify-center sm:w-44">
-                <div className="relative h-20 w-20 overflow-hidden rounded-xl border border-neutral-100 bg-white dark:border-neutral-800">
+            <div className="relative h-20 w-full shrink-0 overflow-hidden rounded-xl border border-neutral-100 bg-white sm:w-44 dark:border-neutral-800">
+                <div className="absolute left-1/2 top-1/2 h-16 w-16 -translate-x-1/2 -translate-y-1/2 overflow-hidden">
                     <div className="absolute inset-y-0 left-0 w-[200%]">
                         <Image
                             src={item.image}
@@ -38,19 +38,15 @@ function ExperienceImage({ item }: { item: ExperienceItem }) {
         );
     }
 
-    const isWordmark = item.imageMode === 'wordmark';
-
     return (
-        <div className={`flex h-20 shrink-0 items-center justify-center ${isWordmark ? 'w-full sm:w-44' : 'w-20 sm:w-44'}`}>
-            <div className={`relative h-20 overflow-hidden rounded-xl border border-neutral-100 bg-white dark:border-neutral-800 ${isWordmark ? 'w-full' : 'w-20'}`}>
-                <Image
-                    src={item.image}
-                    alt={item.imageAlt || item.organization}
-                    fill
-                    sizes={isWordmark ? '176px' : '80px'}
-                    className={isWordmark ? 'scale-[2.15] object-contain' : 'p-1.5 object-contain'}
-                />
-            </div>
+        <div className="relative h-20 w-full shrink-0 overflow-hidden rounded-xl border border-neutral-100 bg-white sm:w-44 dark:border-neutral-800">
+            <Image
+                src={item.image}
+                alt={item.imageAlt || item.organization}
+                fill
+                sizes="176px"
+                className={item.imageMode === 'wordmark' ? 'scale-[2.15] object-contain' : 'p-2 object-contain'}
+            />
         </div>
     );
 }
@@ -129,13 +125,28 @@ export default function ExperiencePage({ config }: { config: ExperiencePageConfi
                                                         )}
                                                     </div>
 
-                                                    <p className="font-medium text-accent">{item.title}</p>
+                                                    <div className="flex flex-wrap items-baseline gap-x-2">
+                                                        <p className="font-medium text-accent">{item.title}</p>
+                                                        {item.advisor && (
+                                                            <p className="text-sm text-neutral-600 dark:text-neutral-400">
+                                                                <span aria-hidden="true">·</span>{' '}
+                                                                <span className="font-medium text-primary">{item.advisorLabel || 'Advisor'}:</span>{' '}
+                                                                {item.advisorUrl ? (
+                                                                    <a
+                                                                        href={item.advisorUrl}
+                                                                        target="_blank"
+                                                                        rel="noopener noreferrer"
+                                                                        className="text-accent transition-opacity hover:opacity-70"
+                                                                    >
+                                                                        {item.advisor}
+                                                                    </a>
+                                                                ) : item.advisor}
+                                                            </p>
+                                                        )}
+                                                    </div>
 
                                                     {item.date && (
-                                                        <p className="mt-3 flex items-center gap-1.5 text-sm text-neutral-500">
-                                                            <CalendarDays className="h-4 w-4" aria-hidden="true" />
-                                                            {item.date}
-                                                        </p>
+                                                        <p className="mt-3 text-sm text-neutral-500">{item.date}</p>
                                                     )}
 
                                                     {item.description && (
@@ -144,21 +155,6 @@ export default function ExperiencePage({ config }: { config: ExperiencePageConfi
                                                         </p>
                                                     )}
 
-                                                    {item.advisor && (
-                                                        <p className="mt-3 text-sm text-neutral-600 dark:text-neutral-400">
-                                                            <span className="font-medium text-primary">{item.advisorLabel || 'Advisor'}:</span>{' '}
-                                                            {item.advisorUrl ? (
-                                                                <a
-                                                                    href={item.advisorUrl}
-                                                                    target="_blank"
-                                                                    rel="noopener noreferrer"
-                                                                    className="text-accent transition-opacity hover:opacity-70"
-                                                                >
-                                                                    {item.advisor}
-                                                                </a>
-                                                            ) : item.advisor}
-                                                        </p>
-                                                    )}
                                                 </div>
 
                                                 <ExperienceImage item={item} />
