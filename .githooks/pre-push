@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+remote_name="${1:-unknown}"
+blocked=false
+
+while read -r local_ref local_sha remote_ref remote_sha; do
+  if [[ "$remote_ref" == "refs/heads/main" ]]; then
+    blocked=true
+  fi
+done
+
+if [[ "$blocked" == "true" && "${HOMEPAGE_DEPLOY_APPROVED:-}" != "YES" ]]; then
+  cat >&2 <<EOF
+
+Push blocked: updating origin/main would deploy the public homepage.
+
+Remote: ${remote_name}
+
+Ask Huanming for explicit approval first. After approval, run the intended
+push with this one-command acknowledgement:
+
+  HOMEPAGE_DEPLOY_APPROVED=YES git push origin main
+
+Draft branches are not blocked and do not trigger the Pages workflow.
+EOF
+  exit 1
+fi
+
+exit 0
