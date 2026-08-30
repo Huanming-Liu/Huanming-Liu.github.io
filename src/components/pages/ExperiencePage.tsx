@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { BriefcaseBusiness, GraduationCap, MapPin } from 'lucide-react';
+import { BriefcaseBusiness, CalendarDays, GraduationCap } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { ExperienceItem, ExperiencePageConfig } from '@/types/page';
 
@@ -22,15 +22,17 @@ function ExperienceImage({ item }: { item: ExperienceItem }) {
 
     if (item.imageMode === 'crop-left') {
         return (
-            <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-xl border border-neutral-100 bg-white dark:border-neutral-800">
-                <div className="absolute inset-y-0 left-0 w-[200%]">
-                    <Image
-                        src={item.image}
-                        alt={item.imageAlt || item.organization}
-                        fill
-                        sizes="160px"
-                        className="object-contain object-left"
-                    />
+            <div className="flex h-20 w-20 shrink-0 items-center justify-center sm:w-44">
+                <div className="relative h-20 w-20 overflow-hidden rounded-xl border border-neutral-100 bg-white dark:border-neutral-800">
+                    <div className="absolute inset-y-0 left-0 w-[200%]">
+                        <Image
+                            src={item.image}
+                            alt={item.imageAlt || item.organization}
+                            fill
+                            sizes="160px"
+                            className="object-contain object-left"
+                        />
+                    </div>
                 </div>
             </div>
         );
@@ -39,14 +41,16 @@ function ExperienceImage({ item }: { item: ExperienceItem }) {
     const isWordmark = item.imageMode === 'wordmark';
 
     return (
-        <div className={`relative h-20 shrink-0 overflow-hidden rounded-xl border border-neutral-100 bg-white dark:border-neutral-800 ${isWordmark ? 'w-full sm:w-44' : 'w-20'}`}>
-            <Image
-                src={item.image}
-                alt={item.imageAlt || item.organization}
-                fill
-                sizes={isWordmark ? '176px' : '80px'}
-                className={isWordmark ? 'scale-[2.15] object-contain' : 'p-1.5 object-contain'}
-            />
+        <div className={`flex h-20 shrink-0 items-center justify-center ${isWordmark ? 'w-full sm:w-44' : 'w-20 sm:w-44'}`}>
+            <div className={`relative h-20 overflow-hidden rounded-xl border border-neutral-100 bg-white dark:border-neutral-800 ${isWordmark ? 'w-full' : 'w-20'}`}>
+                <Image
+                    src={item.image}
+                    alt={item.imageAlt || item.organization}
+                    fill
+                    sizes={isWordmark ? '176px' : '80px'}
+                    className={isWordmark ? 'scale-[2.15] object-contain' : 'p-1.5 object-contain'}
+                />
+            </div>
         </div>
     );
 }
@@ -108,12 +112,9 @@ export default function ExperiencePage({ config }: { config: ExperiencePageConfi
                                                 <div className="min-w-0 flex-1">
                                                     <div className="mb-3 flex items-center gap-3 sm:hidden">
                                                         <ExperienceIcon kind={item.kind} />
-                                                        {item.date && (
-                                                            <span className="text-sm font-medium text-neutral-500">{item.date}</span>
-                                                        )}
                                                     </div>
 
-                                                    <div className="mb-2 flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
+                                                    <div className="mb-1">
                                                         {item.organizationUrl ? (
                                                             <a
                                                                 href={item.organizationUrl}
@@ -126,19 +127,14 @@ export default function ExperiencePage({ config }: { config: ExperiencePageConfi
                                                         ) : (
                                                             <h3 className="text-xl font-semibold text-primary">{item.organization}</h3>
                                                         )}
-                                                        {item.date && (
-                                                            <span className="hidden shrink-0 rounded-full bg-neutral-100 px-3 py-1 text-sm font-medium text-neutral-600 dark:bg-neutral-800 dark:text-neutral-300 sm:inline-flex">
-                                                                {item.date}
-                                                            </span>
-                                                        )}
                                                     </div>
 
                                                     <p className="font-medium text-accent">{item.title}</p>
 
-                                                    {item.location && (
-                                                        <p className="mt-2 flex items-center gap-1.5 text-sm text-neutral-500">
-                                                            <MapPin className="h-4 w-4" aria-hidden="true" />
-                                                            {item.location}
+                                                    {item.date && (
+                                                        <p className="mt-3 flex items-center gap-1.5 text-sm text-neutral-500">
+                                                            <CalendarDays className="h-4 w-4" aria-hidden="true" />
+                                                            {item.date}
                                                         </p>
                                                     )}
 
