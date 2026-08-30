@@ -10,6 +10,9 @@ export interface SiteConfig {
     favicon: string;
     last_updated?: string;
   };
+  theme?: {
+    accent?: 'blue' | 'yellow';
+  };
   author: {
     name: string;
     title: string;
@@ -83,6 +86,7 @@ function mergeConfig(base: SiteConfig, localized?: Partial<SiteConfig> | null): 
       ...base.social,
       ...(localized.social || {}),
     },
+    theme: base.theme,
     features: base.features,
     navigation: localized.navigation || base.navigation,
     sections: localized.sections || base.sections,

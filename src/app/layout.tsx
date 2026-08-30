@@ -119,6 +119,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const config = getConfig();
+  const accentTheme = config.theme?.accent === 'yellow' ? 'yellow' : 'blue';
   const runtimeI18n = getRuntimeI18nConfig(config.i18n);
   const targetLocales = runtimeI18n.enabled ? runtimeI18n.locales : [runtimeI18n.defaultLocale];
 
@@ -129,7 +130,12 @@ export default function RootLayout({
   } = buildLocalizedConfigMaps(targetLocales);
 
   return (
-    <html lang={runtimeI18n.defaultLocale} className="scroll-smooth" suppressHydrationWarning>
+    <html
+      lang={runtimeI18n.defaultLocale}
+      className="scroll-smooth"
+      data-accent-theme={accentTheme}
+      suppressHydrationWarning
+    >
       <head>
         <link rel="icon" href={config.site.favicon} type="image/svg+xml" />
         <link rel="dns-prefetch" href="https://jialeliu.com" />

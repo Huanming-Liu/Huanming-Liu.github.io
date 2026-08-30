@@ -4,6 +4,10 @@ description = "Personal website of Huanming Liu."
 favicon = "/favicon.png"
 last_updated = "May 29, 2026"
 
+[theme]
+# Switch with: npm run theme:blue / npm run theme:yellow
+accent = "blue"
+
 [author]
 name = "Huanming Liu"
 title = "Undergraduate Student"

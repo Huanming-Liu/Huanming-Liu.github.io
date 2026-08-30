@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "edit:start": "bash scripts/start-edit.sh",
-    "checkpoint": "bash scripts/checkpoint.sh"
+    "checkpoint": "bash scripts/checkpoint.sh",
+    "theme:blue": "node scripts/set-accent-theme.mjs blue",
+    "theme:yellow": "node scripts/set-accent-theme.mjs yellow"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.4",
