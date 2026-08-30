@@ -53,6 +53,12 @@ target = "about"
 href = "/"
 
 [[navigation]]
+title = "experience"
+type = "page"
+target = "experience"
+href = "/experience"
+
+[[navigation]]
 title = "publications"
 type = "page"
 target = "publications"

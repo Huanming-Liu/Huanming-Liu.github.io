@@ -22,6 +22,12 @@ target = "about"
 href = "/"
 
 [[navigation]]
+title = "经历"
+type = "page"
+target = "experience"
+href = "/experience"
+
+[[navigation]]
 title = "论文"
 type = "page"
 target = "publications"

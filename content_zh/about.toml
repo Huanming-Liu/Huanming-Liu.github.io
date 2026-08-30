@@ -14,12 +14,6 @@ source = "bio.md"
 title = "关于我"
 
 [[sections]]
-id = "education"
-type = "markdown"
-source = "education.md"
-title = "教育经历"
-
-[[sections]]
 id = "selected-publications"
 type = "publications"
 title = "精选论文"

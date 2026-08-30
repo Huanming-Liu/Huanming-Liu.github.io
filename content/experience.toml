@@ -1,0 +1,44 @@
+type = "experience"
+title = "Experience"
+eyebrow = "Curriculum vitae"
+description = "My education and internship experience."
+
+[[sections]]
+title = "Education"
+
+[[sections.items]]
+title = "B.E. in Automation"
+organization = "University of Science and Technology of China"
+date = "2023 — Present"
+location = "Hefei, China"
+description = "Undergraduate student in the Department of Automation."
+image = "/experience/ustc-emblems.jpg"
+imageAlt = "University of Science and Technology of China emblem"
+imageMode = "crop-left"
+kind = "education"
+
+[[sections]]
+title = "Internships"
+
+[[sections.items]]
+title = "Research Intern"
+organization = "ScaleLab, Shanghai Jiao Tong University"
+organizationUrl = "https://scalelab-sjtu.github.io/index.html"
+date = "Aug 2025 — Jan 2026"
+location = "Shanghai, China"
+advisor = "Yao Mu"
+advisorLabel = "Advisor"
+advisorUrl = "https://yaomarkmu.github.io"
+image = "/experience/sjtu-emblem.png"
+imageAlt = "Shanghai Jiao Tong University emblem"
+imageMode = "contain"
+kind = "work"
+
+[[sections.items]]
+title = "Embodied AI Algorithm Engineer"
+organization = "LYNSENSE (灵犀智涌)"
+date = "Jul 2026 — Present"
+image = "/experience/lynsense.jpg"
+imageAlt = "LYNSENSE logo"
+imageMode = "wordmark"
+kind = "work"
