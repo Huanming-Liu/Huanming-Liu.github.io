@@ -8,6 +8,7 @@ title = "Education"
 [[sections.items]]
 title = "B.E. in Automation"
 organization = "University of Science and Technology of China"
+organizationUrl = "https://en.ustc.edu.cn/"
 date = "2023 — Present"
 image = "/experience/ustc-emblems.jpg"
 imageAlt = "University of Science and Technology of China emblem"

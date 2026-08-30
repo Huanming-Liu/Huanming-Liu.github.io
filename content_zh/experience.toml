@@ -8,6 +8,7 @@ title = "教育背景"
 [[sections.items]]
 title = "自动化专业，本科"
 organization = "中国科学技术大学"
+organizationUrl = "https://www.ustc.edu.cn/"
 date = "2023 — 至今"
 image = "/experience/ustc-emblems.jpg"
 imageAlt = "中国科学技术大学校徽"

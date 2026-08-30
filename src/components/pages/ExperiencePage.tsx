@@ -116,20 +116,19 @@ export default function ExperiencePage({ config }: { config: ExperiencePageConfi
                                                                 href={item.organizationUrl}
                                                                 target="_blank"
                                                                 rel="noopener noreferrer"
-                                                                className="text-xl font-semibold text-primary transition-opacity hover:opacity-70"
+                                                                className="text-xl font-semibold text-accent transition-opacity hover:opacity-70"
                                                             >
                                                                 {item.organization}
                                                             </a>
                                                         ) : (
-                                                            <h3 className="text-xl font-semibold text-primary">{item.organization}</h3>
+                                                            <h3 className="text-xl font-semibold text-accent">{item.organization}</h3>
                                                         )}
                                                     </div>
 
                                                     <div className="flex flex-wrap items-baseline gap-x-2">
-                                                        <p className="font-medium text-accent">{item.title}</p>
+                                                        <p className="font-normal text-primary">{item.title}</p>
                                                         {item.advisor && (
                                                             <p className="text-sm text-neutral-600 dark:text-neutral-400">
-                                                                <span aria-hidden="true">·</span>{' '}
                                                                 <span className="font-medium text-primary">{item.advisorLabel || 'Advisor'}:</span>{' '}
                                                                 {item.advisorUrl ? (
                                                                     <a
