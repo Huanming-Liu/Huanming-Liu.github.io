@@ -128,8 +128,8 @@ export default function ExperiencePage({ config }: { config: ExperiencePageConfi
                                                     <div className="flex flex-wrap items-baseline gap-x-2">
                                                         <p className="font-normal text-primary">{item.title}</p>
                                                         {item.advisor && (
-                                                            <p className="text-sm text-neutral-600 dark:text-neutral-400">
-                                                                <span className="font-medium text-primary">{item.advisorLabel || 'Advisor'}:</span>{' '}
+                                                            <p className="font-normal text-primary">
+                                                                {item.advisorLabel || 'Advisor'}:{' '}
                                                                 {item.advisorUrl ? (
                                                                     <a
                                                                         href={item.advisorUrl}

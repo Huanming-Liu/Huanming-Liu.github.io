@@ -29,7 +29,7 @@ kind = "work"
 
 [[sections.items]]
 title = "科研实习生"
-organization = "ScaleLab@SJTU"
+organization = "上海交通大学空间认知与机器人自主智能实验室"
 organizationUrl = "https://scalelab-sjtu.github.io/index.html"
 date = "2025.08 — 2026.01"
 advisor = "穆尧"
