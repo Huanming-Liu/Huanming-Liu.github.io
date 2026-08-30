@@ -125,7 +125,7 @@ export default function ExperiencePage({ config }: { config: ExperiencePageConfi
                                                         )}
                                                     </div>
 
-                                                    <div className="flex flex-wrap items-baseline gap-x-2">
+                                                    <div className="flex flex-wrap items-baseline gap-x-3">
                                                         <p className="font-normal text-primary">{item.title}</p>
                                                         {item.advisor && (
                                                             <p className="font-normal text-primary">
