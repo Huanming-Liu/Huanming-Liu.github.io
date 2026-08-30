@@ -1,4 +1,4 @@
-I am an undergraduate student in the Department of Automation at the [University of Science and Technology of China](https://en.ustc.edu.cn/), advised by [Prof. Jianmin Ji](https://staff.ustc.edu.cn/~jianmin/). I also work closely with [Prof. Yao Mu](https://yaomarkmu.github.io/) at [Shanghai Jiao Tong University](https://en.sjtu.edu.cn/).
+I am an undergraduate student in the Department of Automation at the [University of Science and Technology of China](https://en.ustc.edu.cn/), advised by [Prof. Jianmin Ji](https://staff.ustc.edu.cn/~jianmin/).
 
 My research interests include agentic embodied AI and embodied foundation models. I'm also interested in their applications to dexterous manipulation and mobile manipulation.
 

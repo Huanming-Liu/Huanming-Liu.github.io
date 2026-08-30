@@ -1,6 +1,5 @@
 type = "experience"
 title = "经历"
-eyebrow = "个人履历"
 description = "我的教育背景与实习经历。"
 
 [[sections]]
@@ -29,7 +28,7 @@ kind = "work"
 
 [[sections.items]]
 title = "科研实习生"
-organization = "上海交通大学 ScaleLab"
+organization = "ScaleLab@SJTU"
 organizationUrl = "https://scalelab-sjtu.github.io/index.html"
 date = "2025.08 — 2026.01"
 advisor = "穆尧"

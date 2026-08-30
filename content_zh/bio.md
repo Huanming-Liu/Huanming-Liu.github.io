@@ -1,4 +1,4 @@
-我是 [中国科学技术大学](https://www.ustc.edu.cn/) 自动化系本科生，导师为 [吉建民老师](https://staff.ustc.edu.cn/~jianmin/)。同时，我与 [上海交通大学](https://www.sjtu.edu.cn/) [穆尧老师](https://yaomarkmu.github.io/) 保持紧密合作。
+我是 [中国科学技术大学](https://www.ustc.edu.cn/) 自动化系本科生，导师为 [吉建民老师](https://staff.ustc.edu.cn/~jianmin/)。
 
 我的研究兴趣主要包括 agentic embodied AI 与 embodied foundation models，并关注其在灵巧操作、移动操作等场景中的应用。
 

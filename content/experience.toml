@@ -1,6 +1,5 @@
 type = "experience"
 title = "Experience"
-eyebrow = "Curriculum vitae"
 description = "My education and internship experience."
 
 [[sections]]
@@ -29,7 +28,7 @@ kind = "work"
 
 [[sections.items]]
 title = "Research Intern"
-organization = "ScaleLab, Shanghai Jiao Tong University"
+organization = "ScaleLab@SJTU"
 organizationUrl = "https://scalelab-sjtu.github.io/index.html"
 date = "Aug 2025 — Jan 2026"
 advisor = "Yao Mu"
