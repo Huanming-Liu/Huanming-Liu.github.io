@@ -45,6 +45,7 @@ export interface ExperienceItem {
     imageAlt?: string;
     imageMode?: 'contain' | 'wordmark' | 'crop-left';
     kind?: 'education' | 'work';
+    icon?: 'robot-arm';
 }
 
 export interface ExperienceSection {

@@ -5,12 +5,40 @@ import { Bot, GraduationCap } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { ExperienceItem, ExperiencePageConfig } from '@/types/page';
 
-function ExperienceIcon({ kind }: { kind?: ExperienceItem['kind'] }) {
-    const Icon = kind === 'work' ? Bot : GraduationCap;
+function RobotArmIcon({ className }: { className?: string }) {
+    return (
+        <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className={className}
+            aria-hidden="true"
+        >
+            <path d="M4 21h15" />
+            <path d="M7 21v-4h5v4" />
+            <circle cx="9.5" cy="15" r="2" />
+            <path d="m10.9 13.6 3.7-3.7" />
+            <circle cx="16" cy="8.5" r="2" />
+            <path d="m17.8 7.6 2.7-1.4" />
+            <path d="m20.5 6.2-.4-2.2" />
+            <path d="m20.5 6.2 1.7 1.5" />
+        </svg>
+    );
+}
+
+function ExperienceIcon({ item }: { item: ExperienceItem }) {
+    const Icon = item.kind === 'work' ? Bot : GraduationCap;
 
     return (
         <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-accent/20 bg-accent/10 text-accent">
-            <Icon className="h-5 w-5" aria-hidden="true" />
+            {item.icon === 'robot-arm' ? (
+                <RobotArmIcon className="h-5 w-5" />
+            ) : (
+                <Icon className="h-5 w-5" aria-hidden="true" />
+            )}
         </span>
     );
 }
@@ -103,7 +131,7 @@ export default function ExperiencePage({ config }: { config: ExperiencePageConfi
                                             className="relative rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md dark:border-neutral-800 dark:bg-neutral-900 sm:p-6"
                                         >
                                             <div className="absolute -left-[3.82rem] top-6 hidden rounded-full bg-background p-1 sm:block">
-                                                <ExperienceIcon kind={item.kind} />
+                                                <ExperienceIcon item={item} />
                                             </div>
 
                                             <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:gap-6">
@@ -111,7 +139,7 @@ export default function ExperiencePage({ config }: { config: ExperiencePageConfi
 
                                                 <div className="min-w-0 flex-1">
                                                     <div className="mb-3 flex items-center gap-3 sm:hidden">
-                                                        <ExperienceIcon kind={item.kind} />
+                                                        <ExperienceIcon item={item} />
                                                     </div>
 
                                                     <div className="mb-1">
