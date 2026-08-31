@@ -9,22 +9,11 @@ function RobotArmIcon({ className }: { className?: string }) {
     return (
         <svg
             viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
+            fill="currentColor"
             className={className}
             aria-hidden="true"
         >
-            <path d="M4 21h15" />
-            <path d="M7 21v-4h5v4" />
-            <circle cx="9.5" cy="15" r="2" />
-            <path d="m10.9 13.6 3.7-3.7" />
-            <circle cx="16" cy="8.5" r="2" />
-            <path d="m17.8 7.6 2.7-1.4" />
-            <path d="m20.5 6.2-.4-2.2" />
-            <path d="m20.5 6.2 1.7 1.5" />
+            <path d="M19.93 8.35l-3.6 1.68L14 7.7V6.3l2.33-2.33 3.6 1.68c.38.18.82.01 1-.36.18-.38.01-.82-.36-1l-3.92-1.83a.993.993 0 0 0-1.13.2L13.78 4.4A.975.975 0 0 0 13 4c-.55 0-1 .45-1 1v1H8.82C8.4 4.84 7.3 4 6 4 4.34 4 3 5.34 3 7c0 1.1.6 2.05 1.48 2.58L7.08 18H6c-1.1 0-2 .9-2 2v1h13v-1c0-1.1-.9-2-2-2h-1.62L8.41 8.77c.17-.24.31-.49.41-.77H12v1c0 .55.45 1 1 1 .32 0 .6-.16.78-.4l1.74 1.74c.3.3.75.38 1.13.2l3.92-1.83c.38-.18.54-.62.36-1a.753.753 0 0 0-1-.36zM6 8c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm5.11 10H9.17l-2.46-8h.1l4.3 8z" />
         </svg>
     );
 }
@@ -35,7 +24,7 @@ function ExperienceIcon({ item }: { item: ExperienceItem }) {
     return (
         <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-accent/20 bg-accent/10 text-accent">
             {item.icon === 'robot-arm' ? (
-                <RobotArmIcon className="h-5 w-5" />
+                <RobotArmIcon className="h-6 w-6" />
             ) : (
                 <Icon className="h-5 w-5" aria-hidden="true" />
             )}
