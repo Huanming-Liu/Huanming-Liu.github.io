@@ -52,19 +52,19 @@ zh = "中文"
 en = "English"
 
 [[navigation]]
-title = "about"
+title = "About"
 type = "page"
 target = "about"
 href = "/"
 
 [[navigation]]
-title = "experience"
+title = "Experience"
 type = "page"
 target = "experience"
 href = "/experience"
 
 [[navigation]]
-title = "publications"
+title = "Publications"
 type = "page"
 target = "publications"
 href = "/publications"
