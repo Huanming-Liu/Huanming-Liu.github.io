@@ -3,8 +3,9 @@ title = "About"
 
 [profile]
 research_interests = [
-  "Embodied AI",
-  "Manipulation"
+  "Embodied Agents",
+  "Embodied Foundation Models",
+  "Robot Manipulation"
 ]
 
 [[sections]]
