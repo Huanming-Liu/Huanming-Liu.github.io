@@ -22,7 +22,7 @@ function ExperienceImage({ item }: { item: ExperienceItem }) {
 
     if (item.imageMode === 'crop-left') {
         return (
-            <div className="relative h-20 w-full shrink-0 overflow-hidden rounded-xl border border-neutral-100 bg-white sm:w-44 dark:border-neutral-800">
+            <div className="relative h-24 w-full shrink-0 overflow-hidden rounded-xl border border-neutral-100 bg-white sm:w-48 dark:border-neutral-800">
                 <div className="absolute left-1/2 top-1/2 h-16 w-16 -translate-x-1/2 -translate-y-1/2 overflow-hidden">
                     <div className="absolute inset-y-0 left-0 w-[200%]">
                         <Image
@@ -39,12 +39,12 @@ function ExperienceImage({ item }: { item: ExperienceItem }) {
     }
 
     return (
-        <div className="relative h-20 w-full shrink-0 overflow-hidden rounded-xl border border-neutral-100 bg-white sm:w-44 dark:border-neutral-800">
+        <div className="relative h-24 w-full shrink-0 overflow-hidden rounded-xl border border-neutral-100 bg-white sm:w-48 dark:border-neutral-800">
             <Image
                 src={item.image}
                 alt={item.imageAlt || item.organization}
                 fill
-                sizes="176px"
+                sizes="192px"
                 className={item.imageMode === 'wordmark' ? 'scale-[2.15] object-contain' : 'p-2 object-contain'}
             />
         </div>
