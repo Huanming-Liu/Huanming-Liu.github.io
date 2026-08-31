@@ -10,9 +10,10 @@ title = "本科生"
 institution = "中国科学技术大学"
 
 [social]
-location = "中国科学技术大学高新校区"
+location = "安徽省合肥市蜀山区 / 上海市徐汇区"
 location_details = [
-  "中国科学技术大学高新校区"
+  "安徽省合肥市蜀山区",
+  "上海市徐汇区"
 ]
 
 [[navigation]]

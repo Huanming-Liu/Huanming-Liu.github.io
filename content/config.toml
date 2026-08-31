@@ -18,11 +18,11 @@ avatar = "/avatar.jpg"
 # Contact information (leave blank or delete to hide)
 
 email = "lhm_0410@mail.ustc.edu.cn"
-location = "University of Science and Technology of China, High-Tech Campus"
+location = "Shushan District, Hefei / Xuhui District, Shanghai"
 location_url = ""
 location_details = [
-  "University of Science and Technology of China,",
-  "High-Tech Campus, Hefei, China"
+  "Shushan District, Hefei, Anhui",
+  "Xuhui District, Shanghai"
 ]
 github = "https://github.com/Huanming-Liu"
 linkedin = ""
