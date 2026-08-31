@@ -1,12 +1,12 @@
 'use client';
 
 import Image from 'next/image';
-import { BriefcaseBusiness, GraduationCap } from 'lucide-react';
+import { Bot, GraduationCap } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { ExperienceItem, ExperiencePageConfig } from '@/types/page';
 
 function ExperienceIcon({ kind }: { kind?: ExperienceItem['kind'] }) {
-    const Icon = kind === 'work' ? BriefcaseBusiness : GraduationCap;
+    const Icon = kind === 'work' ? Bot : GraduationCap;
 
     return (
         <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-accent/20 bg-accent/10 text-accent">
