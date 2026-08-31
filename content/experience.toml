@@ -6,7 +6,7 @@ description = "My education and internship experience."
 title = "Education"
 
 [[sections.items]]
-title = "B.E. in Automation"
+title = "B.Eng. in Automation"
 organization = "University of Science and Technology of China"
 organizationUrl = "https://en.ustc.edu.cn/"
 date = "2023 — Present"
