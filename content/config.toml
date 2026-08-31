@@ -2,7 +2,7 @@
 title = "Huanming Liu"
 description = "Personal website of Huanming Liu."
 favicon = "/favicon.png"
-last_updated = "May 29, 2026"
+last_updated = "Aug 31, 2026"
 
 [theme]
 # Switch with: npm run theme:blue / npm run theme:yellow
