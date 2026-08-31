@@ -104,7 +104,9 @@ export default function ExperiencePage({ config }: { config: ExperiencePageConfi
                                                 <ExperienceIcon kind={item.kind} />
                                             </div>
 
-                                            <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
+                                            <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:gap-6">
+                                                <ExperienceImage item={item} />
+
                                                 <div className="min-w-0 flex-1">
                                                     <div className="mb-3 flex items-center gap-3 sm:hidden">
                                                         <ExperienceIcon kind={item.kind} />
@@ -155,8 +157,6 @@ export default function ExperiencePage({ config }: { config: ExperiencePageConfi
                                                     )}
 
                                                 </div>
-
-                                                <ExperienceImage item={item} />
                                             </div>
                                         </motion.article>
                                     );
