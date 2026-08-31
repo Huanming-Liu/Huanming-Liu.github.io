@@ -146,6 +146,12 @@ export default function ExperiencePage({ config }: { config: ExperiencePageConfi
                                                         )}
                                                     </div>
 
+                                                    {item.researchFocus && (
+                                                        <p className="font-normal text-primary">
+                                                            {item.researchFocusLabel || 'Research Focus: '}{item.researchFocus}
+                                                        </p>
+                                                    )}
+
                                                     {item.date && (
                                                         <p className="mt-3 text-sm text-neutral-500">{item.date}</p>
                                                     )}

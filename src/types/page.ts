@@ -39,6 +39,8 @@ export interface ExperienceItem {
     advisor?: string;
     advisorLabel?: string;
     advisorUrl?: string;
+    researchFocus?: string;
+    researchFocusLabel?: string;
     image?: string;
     imageAlt?: string;
     imageMode?: 'contain' | 'wordmark' | 'crop-left';
